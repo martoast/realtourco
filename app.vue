@@ -1,0 +1,9 @@
+<template>
+  <div>
+    <Navbar/>
+    <Hero/>
+    <About/>
+    <Features/>
+    <Contact/>
+  </div>
+</template>
