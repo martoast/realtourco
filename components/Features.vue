@@ -19,7 +19,7 @@
         </div>
         <div>
           <h2>Fully interactive</h2>
-          <p>Unlike traditional 360-degree images, our virtual tours are immersive experiences that provide a greater feeling of realism, allowing you to explore your future property from every angle.</p>
+          <p>Unlike traditional 360-degree images, our virtual tours are immersive experiences that provide a greater feeling of realism, allowing you to explore your future property from every angle delivering a more natural experience.</p>
           <a href="#" class="btn btn-primary">
             Learn more
           </a>
@@ -31,7 +31,7 @@
         </div>
         <div>
           <h2>Any time, any where</h2>
-          <p>Whether you're using a desktop computer, a tablet, or even a virtual reality headset, you can explore your future property with ease.</p>
+          <p>Whether you're using a desktop computer, a tablet, or even a virtual reality headset, you can explore your future property with ease. With RealTourCo, you can take your virtual tour with you wherever you go.</p>
           <a href="#" class="btn btn-primary">
             Learn more
           </a>

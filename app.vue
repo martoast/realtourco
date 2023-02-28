@@ -4,6 +4,7 @@
     <Hero/>
     <About/>
     <Features/>
+    <Projects/>
     <Contact/>
   </div>
 </template>
