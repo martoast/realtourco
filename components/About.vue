@@ -7,9 +7,9 @@
         </div>
         <div class="col-lg-6">
             <h1 class="display-5 fw-bold lh-1 mb-3">
-                DREAM IT.
+                Dream it.
             </h1>
-            <p class="lead">Utilizing the latest WebGL technology, RealTourCo lets you bring your future real estate projects to life before it's even built. Whether you're a home buyer, or your client needs an apartment visualised, RealTourCo's state-of-the-art virtual tours and VR-compatible technology make it easy to showcase and envision properties like never before.</p>
+            <p class="lead">Utilizing the latest WebGL technology, RealTourCo lets you bring your dream real estate projects to life before it's even built. Whether you're a home buyer, or your client needs an apartment visualised, RealTourCo's state-of-the-art virtual tours and VR-compatible technology make it easy to showcase and envision properties like never before.</p>
         </div>
         </div>
     </div>
