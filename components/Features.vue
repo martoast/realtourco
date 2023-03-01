@@ -3,8 +3,8 @@
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
       <div class="col align-items-start">
         <div>
-          <h2>Built to scale</h2>
-          <p>complete volumetric 3D rendering of buildings using architectural plans. Our in-house architects carefully interpret your plans to create virtual tour renders that are both visually stunning and true to scale.</p>
+          <h2>Add to any website</h2>
+          <p>Embed directly into any website using iFrame embed code an en external website, or simply send a link to open on any of the popular web browsers. Google Chrome, Microsoft Edge, Apple Safari, Mozilla Firefox.</p>
           <a href="#" class="btn btn-primary">
             Learn more
           </a>
