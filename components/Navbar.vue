@@ -9,7 +9,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
                 <a class="nav-link" href="#About">About</a>
                 <a class="nav-link" href="#Showcase">Products</a>
                 <a class="nav-link" href="#Contact" tabindex="-1" aria-disabled="true">Contact</a>
@@ -18,3 +17,13 @@
         </div>
     </nav>
 </template>
+
+<style scoped>
+
+a:hover {
+  color: #0652FF;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: bold;
+}
+</style>
