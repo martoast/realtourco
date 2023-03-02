@@ -22,7 +22,7 @@
       <div class="col align-items-start">
         <div>
           <h2>Desktop, mobile and VR</h2>
-          <p>Whether you're using a desktop computer, a tablet, or even a virtual reality headset, you can explore your future property with ease. With RealTourCo, you can take your virtual tour with you wherever you go.</p>
+          <p>Whether you're using a desktop computer, a tablet, or even a virtual reality headset, you can explore your future property with ease. With RealTourCo, you can showcase your virtual tour anyway you choose.</p>
           <a href="#" class="btn btn-primary">
             Learn more
           </a>
