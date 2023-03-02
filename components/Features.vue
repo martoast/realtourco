@@ -13,7 +13,7 @@
       <div class="col align-items-start">
         <div>
           <h2>Full movement freedom</h2>
-          <p>Unlike traditional 360-degree images, our virtual tours are immersive experiences that provide a greater feeling of realism, allowing you to explore your future property from every angle delivering a more natural experience.</p>
+          <p>Unlike traditional 360-degree images, our virtual tours are immersive experiences that provide a greater feeling of realism, allowing users to explore your virtual tour from every angle delivering a more natural experience.</p>
           <a href="#" class="btn btn-primary">
             Learn more
           </a>
@@ -22,7 +22,7 @@
       <div class="col align-items-start">
         <div>
           <h2>Desktop, mobile and VR</h2>
-          <p>Whether you're using a desktop computer, a tablet, or even a virtual reality headset, you can explore your future property with ease. With RealTourCo, you can showcase your virtual tour anyway you choose.</p>
+          <p>Whether you're using a desktop computer, a tablet, or even a virtual reality headset, you can showcase your virtual tour with ease. With RealTourCo, you can showcase your virtual tour anyway you choose.</p>
           <a href="#" class="btn btn-primary">
             Learn more
           </a>
