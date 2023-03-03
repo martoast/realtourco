@@ -7,18 +7,18 @@
             <p class="col-lg-10 fs-4">Fill out the form below to schedule a FREE consultation with one of our Virtual Tour Experts.</p>
         </div>
         <div class="col-md-10 mx-auto col-lg-5">
-            <form class="p-4 p-md-5 border rounded-3 bg-light">
+            <form class="p-4 p-md-5 border rounded-3 bg-light" @submit.prevent="handleSubmit" method="POST" data-netlify="true">
             <div class="form-floating mb-3">
-                <input class="form-control" id="fullname" placeholder="Full name">
+                <input v-model="form.name" class="form-control" id="fullname" placeholder="Full name">
                 <label for="fullname">Name</label>
             </div>
                 
             <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input v-model="form.email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Email address</label>
             </div>
             <div class="form-floating mb-3">
-                <input class="form-control" id="floatingPassword" placeholder="Phone number">
+                <input v-model="form.phone" class="form-control" id="floatingPassword" placeholder="Phone number">
                 <label for="floatingPassword">Phone number</label>
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit">Contact</button>
@@ -31,3 +31,39 @@
     </div>
     
 </template>
+
+<script setup>
+
+
+
+const form = reactive({
+    name: null,
+    email: null,
+    phone: null
+})
+
+
+
+
+const encode = (data) => {
+    return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+}
+
+
+const handleSubmit = () => {
+    console.log(form)
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...form })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+}
+
+
+</script>
