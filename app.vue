@@ -4,6 +4,7 @@
     <Hero/>
     <About/>
     <About2/>
+    <About3/>
     <Features/>
     <Projects/>
     <Contact/>
