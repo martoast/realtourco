@@ -1,13 +1,14 @@
 <template>
     <div id="Contact" class="bg-light">
         <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div id="liveAlertPlaceholder"></div>
         <div class="row align-items-center g-lg-5 py-5">
         <div class="col-lg-7 text-center text-lg-start">
             <h1 class="display-4 fw-bold lh-1 mb-3">Get started with a free consultation and estimate.</h1>
             <p class="col-lg-10 fs-4">Fill out the form below to schedule a FREE consultation with one of our Virtual Tour Experts.</p>
         </div>
         <div class="col-md-10 mx-auto col-lg-5">
-            <form class="p-4 p-md-5 border rounded-3 bg-light" @submit.prevent="handleSubmit" method="POST" data-netlify="true">
+            <form class="p-4 p-md-5 border rounded-3 bg-light" @submit.prevent="handleSubmit">
             <div class="form-floating mb-3">
                 <input v-model="form.name" class="form-control" id="fullname" placeholder="Full name">
                 <label for="fullname">Name</label>
@@ -27,7 +28,7 @@
             </form>
         </div>
         </div>
-    </div>
+        </div>
     </div>
     
 </template>
@@ -45,24 +46,28 @@ const form = reactive({
 
 
 
-const encode = (data) => {
-    return Object.keys(data)
-        .map(
-          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
-        .join("&");
-}
 
 
-const handleSubmit = () => {
-    console.log(form)
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...form })
-      })
-        .then(() => alert("Success!"))
-        .catch(error => alert(error));
+
+const handleSubmit = async () => {
+    try {
+        await submitForm(form.email, form.name, form.phone)
+        const alert = (message, type) => {
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+            `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+            `   <div>${message}</div>`,
+            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+        ].join('')
+
+        alertPlaceholder.append(wrapper)
+        }
+        alert('Successfully submitted contact information.', 'success')
+    } catch (e) {
+        console.error(e)
+    }
 }
 
 
