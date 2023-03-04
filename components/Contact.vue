@@ -11,16 +11,16 @@
             <form name="contact" method="POST" data-netlify="true" class="p-4 p-md-5 border rounded-3 bg-light" @submit.prevent="handleSubmit">
             <input type="hidden" name="form-name" value="contact">
             <div class="form-floating mb-3">
-                <input v-model="form.name" class="form-control" id="fullname" placeholder="Full name">
+                <input v-model="form.name" name="name" class="form-control" id="fullname" placeholder="Full name">
                 <label for="fullname">Name</label>
             </div>
                 
             <div class="form-floating mb-3">
-                <input v-model="form.email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <input v-model="form.email" name="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Email address</label>
             </div>
             <div class="form-floating mb-3">
-                <input v-model="form.phone" class="form-control" id="floatingPassword" placeholder="Phone number">
+                <input v-model="form.phone" name="phone" class="form-control" id="floatingPassword" placeholder="Phone number">
                 <label for="floatingPassword">Phone number</label>
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit" :disabled="isLoading">
