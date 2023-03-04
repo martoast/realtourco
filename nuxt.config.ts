@@ -10,6 +10,5 @@ export default defineNuxtConfig({
             FIREBASE_APP_ID: process.env.FIREBASE_APP_ID
         },
     },
-    ssr: false,
     css: ['~/assets/styles/main.scss']
 })

@@ -7,12 +7,10 @@ export const submitForm = async (email: string, name: string, phone: string) => 
 
     console.log(db)
 
-    let res = await setDoc(doc(db, "leads", email), {
+    await setDoc(doc(db, "leads", email), {
         name: name,
         email: email,
         phone: phone
     });
-
-    console.log(res)
 
   };
