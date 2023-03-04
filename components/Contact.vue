@@ -8,7 +8,7 @@
             <p class="col-lg-10 fs-4">Fill out the form below to schedule a FREE consultation with one of our Virtual Tour Experts.</p>
         </div>
         <div class="col-md-10 mx-auto col-lg-5">
-            <form class="p-4 p-md-5 border rounded-3 bg-light" @submit.prevent="handleSubmit">
+            <form name="contact" method="POST" data-netlify="true" class="p-4 p-md-5 border rounded-3 bg-light" @submit.prevent="handleSubmit">
             <div class="form-floating mb-3">
                 <input v-model="form.name" class="form-control" id="fullname" placeholder="Full name">
                 <label for="fullname">Name</label>
@@ -48,12 +48,23 @@ const form = reactive({
 
 const isLoading = ref(false)
 
-
-const handleSubmit = async () => {
-    if (isLoading.value) return;
-    isLoading.value = true
+const encode = (data) => {
+    return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+}
+const handleSubmit = () => {
+        if (isLoading.value) return;
+        isLoading.value = true
     try {
-        await submitForm(form.email, form.name, form.phone)
+        $fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...form })
+      })
+
         const alert = (message, type) => {
         const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
         const wrapper = document.createElement('div')
@@ -73,9 +84,12 @@ const handleSubmit = async () => {
         form.name = null;
         form.email = null;
         form.phone = null;
-    } catch (e) {
+    }
+    catch (e) {
         console.error(e)
     }
+    isLoading.value = false
+
 }
 
 
