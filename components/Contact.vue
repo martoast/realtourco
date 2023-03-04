@@ -22,7 +22,10 @@
                 <input v-model="form.phone" class="form-control" id="floatingPassword" placeholder="Phone number">
                 <label for="floatingPassword">Phone number</label>
             </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Contact</button>
+            <button class="w-100 btn btn-lg btn-primary" type="submit" :disabled="isLoading">
+                <span v-if="isLoading">Loading...</span>
+                <span v-else>Submit</span>
+            </button>
             <hr class="my-4">
             <small class="text-muted">By clicking Contact, you agree to be contacted by our virtual tour experts.</small>
             </form>
@@ -43,13 +46,12 @@ const form = reactive({
     phone: null
 })
 
-
-
-
-
+const isLoading = ref(false)
 
 
 const handleSubmit = async () => {
+    if (isLoading.value) return;
+    isLoading.value = true
     try {
         await submitForm(form.email, form.name, form.phone)
         const alert = (message, type) => {
@@ -64,7 +66,13 @@ const handleSubmit = async () => {
 
         alertPlaceholder.append(wrapper)
         }
+        isLoading.value = false
+        
         alert('Successfully submitted contact information.', 'success')
+
+        form.name = null;
+        form.email = null;
+        form.phone = null;
     } catch (e) {
         console.error(e)
     }
