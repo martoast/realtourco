@@ -9,6 +9,7 @@
         </div>
         <div class="col-md-10 mx-auto col-lg-5">
             <form name="contact" method="POST" data-netlify="true" class="p-4 p-md-5 border rounded-3 bg-light" @submit.prevent="handleSubmit">
+            <input type="hidden" name="form-name" value="contact">
             <div class="form-floating mb-3">
                 <input v-model="form.name" class="form-control" id="fullname" placeholder="Full name">
                 <label for="fullname">Name</label>
