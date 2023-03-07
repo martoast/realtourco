@@ -20,7 +20,7 @@
                 <label for="floatingInput">Email address</label>
             </div>
             <div class="form-floating mb-3">
-                <input v-model="form.phone" name="phone" class="form-control" id="floatingPassword" placeholder="Phone number">
+                <input v-model="form.phone" name="phone" class="form-control" id="floatingPassword" placeholder="Phone number" pattern="[789][0-9]{9}">
                 <label for="floatingPassword">Phone number</label>
             </div>
             <button class="w-100 btn btn-lg btn-primary" type="submit" :disabled="isLoading">

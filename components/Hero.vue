@@ -2,7 +2,7 @@
     <div class="section-video">
         <div class="section-video-media">
             <video playsinline="true" autoplay muted loop style="height: 100%; width: 100%; object-fit: cover;">
-                <source src="/video/main.mp4" type="video/mp4">
+                <source src="/video/main2.mp4" type="video/mp4">
             </video>
         </div>
         
@@ -62,26 +62,3 @@
     justify-content: center;
 }
 </style>
-
-
-<!-- <section class="section-video">
-    <div class="section-video-media">
-      <video id="lead-video" muted="" autoplay="" loop="" playsinline="" preload="auto">
-        <source src="/v177/img/industries/real-estate/shapespark-for-real-estate.mp4" media="all and (min-width: 768px)" type="video/mp4">
-        <source src="/v177/img/industries/real-estate/shapespark-for-real-estate-bitrate1.mp4" media="all and (max-width: 767px)" type="video/mp4">
-      </video>
-    </div>
-    <div class="section-video-wrapper container">
-      <div class="section-video-content text-center text-lg-left mx-auto mx-lg-0">
-        <h1 class="display-3 white">Real Estate</h1>
-        <p class="lead">3D virtual tour &amp; interactive walkthrough software for <strong>off-plan developments</strong></p>
-        
-          <span class="lead-video-attribution" data-duration="19" style="display: block;">Courtesy of Lodha</span>
-        
-          <span class="lead-video-attribution" data-duration="5" style="display: none;">Courtesy of Lightform 3D</span>
-        
-          <span class="lead-video-attribution" data-duration="10000" style="display: none;">Courtesy of Aura 3D Studio</span>
-        
-      </div>
-    </div>
-  </section> -->
